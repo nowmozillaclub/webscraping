@@ -12,14 +12,14 @@ print("Fetching profile...")
 res = requests.get(user_link)
 soup = bs4.BeautifulSoup(res.text, "lxml")
 
-name = soup.select(".ProfileHeaderCard-nameLink.u-textInheritColor.js-nav")
+name = soup.select(".ProfileHeaderCard-nameLink.u-textInheritColor.js-nav") # gets name
 
 count = []
 for item in soup.findAll("span", {"class": "ProfileNav-value"}):
-    count.append(item.get("data-count"))
+    count.append(item.get("data-count")) # all the big numbers
 
 join = soup.select(".ProfileHeaderCard-joinDateText.js-tooltip.u-dir")
-joined = join[0].get("title")
+joined = join[0].get("title") # gets joined twitter date
 
 print("\nSummary for Twitter user {} (aka @{}):".format(name[0].text, user_id))
 

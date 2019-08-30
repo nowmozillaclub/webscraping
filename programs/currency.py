@@ -6,7 +6,7 @@ import requests
 res = requests.get("http://dollarrupee.in/")
 soup = bs4.BeautifulSoup(res.text, "lxml")
 
-rate = soup.select(".item-page p strong")
+rate = soup.select(".item-page p strong") # selects the ruppee value
 rupee = float(rate[0].text)
 
 print("Today's rate: $1 = ₹{}".format(rupee))
