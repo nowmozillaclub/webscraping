@@ -12,3 +12,6 @@ Song lyrics finder:
 
 Wikipedia scraper:
 ![Wikipedia scraper](screenshots/wikipedia.png)
+
+Billboard Hot 100:
+![Billboard Hot 100](screenshots/billboard.png)
